@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="378.0" prefWidth="389.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.movidle.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <ParallelCamera rotate="-45.0" />
+    <ImageView fitHeight="154.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@imdb250image.jpg" />
+        </image>
+    </ImageView>
+
+    <GridPane hgap="10" prefHeight="37.0" prefWidth="383.0" vgap="10">
+        <Label fx:id="filmYear" prefHeight="18.0" prefWidth="84.0" text="Year" GridPane.columnIndex="0" />
+        <Label fx:id="filmGenre" prefHeight="19.0" prefWidth="93.0" text="Genre" GridPane.columnIndex="1" />
+        <Label fx:id="filmOrigin" prefHeight="18.0" prefWidth="84.0" text="Origin" GridPane.columnIndex="2" />
+        <Label fx:id="filmDirector" prefHeight="18.0" prefWidth="91.0" text="Director" GridPane.columnIndex="3" />
+        <Label fx:id="filmStar" prefHeight="28.0" prefWidth="95.0" text="Star" GridPane.columnIndex="5" />
+      <columnConstraints>
+         <ColumnConstraints maxWidth="50.20000381469727" minWidth="23.399996185302733" prefWidth="38.4" />
+         <ColumnConstraints maxWidth="73.80000000000001" minWidth="4.99999618530272" prefWidth="36.8" />
+         <ColumnConstraints maxWidth="64.2" minWidth="15.0" prefWidth="53.400000000000006" />
+         <ColumnConstraints maxWidth="100.39998474121094" minWidth="21.200000000000017" prefWidth="84.59998474121093" />
+         <ColumnConstraints maxWidth="94.0" minWidth="0.0" prefWidth="0.0" />
+         <ColumnConstraints maxWidth="94.0" minWidth="30.0" prefWidth="79.19999999999999" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+
+    <HBox spacing="10">
+        <TextField fx:id="userGuess" promptText="Guess the film..." HBox.hgrow="ALWAYS" />
+        <Button onAction="#onGuessButtonClick" text="Guess" />
+        <Button onAction="#onNewFilmButtonClick" text="New Film" />
+    </HBox>
+</VBox>
